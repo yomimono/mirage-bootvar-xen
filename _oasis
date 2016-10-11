@@ -10,8 +10,8 @@ BuildTools:  ocamlbuild
 Library "mirage-bootvar"
   Path:              lib/
   Findlibname:       mirage-bootvar
-  BuildDepends:      lwt, mirage-xen, astring
-  Modules:           Bootvar, Parse_argv
+  BuildDepends:      lwt, mirage-xen, bos, astring
+  Modules:           Bootvar
 
 Executable test
   CompiledObject:     best
