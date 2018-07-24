@@ -30,7 +30,7 @@ let get_cmd_line () =
     OS.Xs.(immediate client (fun x -> read x "vm")) >>= fun vm ->
     OS.Xs.(immediate client (fun x -> read x (vm^"/image/cmdline"))))
     (fun _ ->
-       let cmdline = (OS.Start_info.get ()).OS.Start_info.cmd_line in
+       let cmdline = (OS.Start_info.cmdline ()) in
        Lwt.return cmdline)
 
 let create () = 
